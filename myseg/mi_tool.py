@@ -436,8 +436,8 @@ async def get_goods_list(game_type: str, cookie='') -> Union[bool, Optional[List
             "point_sn": "myb",
             "page_size": 20,
             "page": 1,
-            # '全部商品':'', '崩坏3':'bh3', '原神':'hk4e', '崩坏：星穹铁道':'hkrpg'
-            # '崩坏学园2':'bh2', '未定事件簿':'nxx', '米游社':'bbs'
+            # '全部商品':'', '崩坏3':'bh3', '原神':'hk4e', '绝区零': 'nap',
+            # '崩坏：星穹铁道':'hkrpg', '崩坏学园2':'bh2', '未定事件簿':'nxx', '米游社':'bbs'
             "game": game_type,
         }
         goods_list_headers = {
