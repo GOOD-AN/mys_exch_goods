@@ -271,9 +271,11 @@ class GoodsInfo(BaseModel):
         """
         获取商品下次兑换时间
         """
-        if self.next_time == 0 or (self.next_time > get_time() and self.total > 0):
+        if self.next_time == 0 or (get_time() > self.next_time and self.total > 0):
             return -1
-        elif self.status == 'online':
+        elif self.next_time == 0:
+            return self.sale_start_time
+        elif self.status == 'online' or self.status == 'not_in_sell':
             return self.next_time
         else:
             return self.sale_start_time
